@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vai corinthian</title>
+    </head>
+    <body>
+        <h1>Aula Clean Code</h1>
+
+        <label for="primeiroValor">Primeiro Valor:</label>
+        <input type="text" id="a">
+        <br><br>
+
+        <label for="segundoValor">Segundo Valor</label>
+        <input type="text" id="b">
+        <br><br>
+
+        <input type="button" value="Somar" onclick="Somar()">
+        <br><br>
+
+        <input type="button" value="Subtrair" onclick="Subtrair()">
+        <br><br>
+
+        <input type="button" value="Multiplicar" onclick="Multiplicar()">
+        <br><br>
+
+        <input type="button" value="Dividir" onclick="Dividir()">
+        <br><br>
+
+        <input type="button" value="Limpar" onclick="Limpar()">
+        <br><br>
+
+        <label for="Resultado">Resultado:</label>
+        <input type="text" id="res" readonly>
+
+        <script>
+            function Somar() {
+
+                //1 buscar os valores dos inputs
+                //2 somar os valores
+                var a = document.getElementById("a").value; var b = document.getElementById("b").value;
+                console.log("o valor de a: " + a); console.log("o valor de b: " + b);
+                //3 exibir o resultado
+                if (parseInt(a) > 0 && parseInt(b) > 0) {
+                    var c = parseInt(a) + parseInt(b);
+                    document.getElementById("res").value = c;
+                }
+            }
+            function Subtrair() {
+                var a = document.getElementById("a").value; var b = document.getElementById("b").value;
+                console.log("o valor de a: " + a); console.log("o valor de b: " + b);
+               
+                if (parseInt(a) > 0 && parseInt(b) > 0) {
+                    var c = parseInt(a) - parseInt(b);
+                    document.getElementById("res").value = c;
+                }
+            }
+            function Limpar(){
+                document.getElementById("a").value = "";
+                document.getElementById("b").value = "";
+                document.getElementById("res").value = "";  
+            }
+
+            function Multiplicar(){
+                var a = document.getElementById("a").value; var b = document.getElementById("b").value;
+                console.log("o valor de a: " + a); console.log("o valor de b: " + b);
+               
+                if (parseInt(a) > 0 && parseInt(b) > 0) {
+                    var c = parseInt(a) * parseInt(b);
+                    document.getElementById("res").value = c;
+                }
+            }
+            function Dividir(){
+                var a = document.getElementById("a").value; var b = document.getElementById("b").value;
+                console.log("o valor de a: " + a); console.log("o valor de b: " + b);
+               
+                if (parseInt(a) > 0 && parseInt(b) > 0) {
+                    var c = parseInt(a) / parseInt(b);
+                    document.getElementById("res").value = c;
+                }
+
+            }
+        </script>
+    </body>
+</html>
